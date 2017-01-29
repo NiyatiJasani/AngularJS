@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="feedback.main.js"></script>
+    <script src="feedback.controller.js"></script>
+</head>
+
+<body ng-app="main" ng-controller="displayCtrl">
+    <div ng-init="firstName=''"></div>
+    <table>
+        <tr>
+            <td>Feedback:</td>
+            <td>
+                <input type="textarea" ng-model="value">
+            </td>
+        </tr>
+        <tr>
+            <tr>
+                <td> Background:</td>
+                <td>
+                    <select ng-model="bgvalue" ng-change="setStyle()">
+                        <option value="red">red</option>
+                        <option value="green">green</option>
+                        <option value="blue">blue</option>
+                    </select>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>FontColor:</td>
+                <td>
+                    <select ng-model="forevalue" ng-change="setStyle()">
+                        <option value="red">red</option>
+                        <option value="green">green</option>
+                        <option value="blue">blue</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td> FontFamily:</td>
+                <td>
+                    <select ng-model="fontvalue" ng-change="setStyle()">
+                        <option value="Arial">Arial</option>
+                        <option value="Tahoma">Sans-serif</option>
+                        <option value="serif">serif</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Font Size: </td>
+                <td>
+                    <select ng-model="sizevalue" ng-change="setStyle()">
+                        <option value="12">12</option>
+                        <option value="15">15</option>
+                        <option value="17">17</option>
+                        <option value="25">25</option>
+                    </select>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <textarea ng-class="yolo" ng-style="textbox" ng-bind="value"></textarea>
+                </td>
+            </tr>
+
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Welcome to LearnKode - A code learning platform</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <style>
+        .gray {
+            background-color: gray;
+        }
+        
+        .magenta {
+            background-color: magenta;
+        }
+        
+        .aqua {
+            background-color: aqua;
+        }
+        
+        .burlywood {
+            background-color: burlywood;
+        }
+    </style>
+</head>
+
+<body ng-app="switchExample">
+    <div ng-controller="ExampleController">
+        <div class="container">
+            Backgroung-Color
+            <select ng-model="BgrclassName" ng-options="bgrArr.className as bgrArr.className for bgrArr in bgrArrs"></select>
+            <br /> Text-Color
+            <select ng-model="TxtclassName" ng-options="clrArr.className as clrArr.className for clrArr in clrArrs"></select>
+            <h2 ng-class="[TxtclassName , BgrclassName]">Class Applying on me.</h2>
+        </div>
+    </div>
+    <script>
+        var app = angular.module("switchExample", []);
+        app.controller('ExampleController', ['$scope', function ($scope) {
+            $scope.bgrArrs = [{
+                className: "gray"
+            }, {
+                className: "magenta"
+            }, {
+                className: "aqua"
+            }, {
+                className: "burlywood"
+            }];
+            $scope.clrArrs = [{
+                className: "text-success"
+            }, {
+                className: "text-danger"
+            }, {
+                className: "text-info"
+            }, {
+                className: "text-warning"
+            }];
+    }]);
+    </script>
+</body>
+
+</html>
