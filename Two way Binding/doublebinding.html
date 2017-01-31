@@ -1,0 +1,31 @@
+<!Doctype html>
+<html>
+
+<head>
+    <script src="/angular.js"></script>
+    <script src="dbl.js"></script>
+
+</head>
+
+<body ng-app="bind" ng-controller="bindCtrl">
+    <h1>Model to View</h1>
+    <div>
+        Email:
+        <label>{{user.name}} </label>
+        <br> Name:
+        <label>{{user.email}}</label>
+    </div>
+
+    <h2>View to model</h2>
+
+    <div>
+        Email:
+        <input type="text" name="email" ng-model=user.email>
+        <br> Name:
+        <input type="text" name="Name" ng-model=user.name>
+
+    </div>
+
+</body>
+
+</html>
