@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <script src=/angular.js></script>
+    <script src="service.main.js"></script>
+    <script src="service.controllerA.js"></script>
+    <script src="service.intcalservice.js"></script>
+    <script src="sevice.controllerB.js"></script>
+</head>
+<title>Calculate Interest</title>
+
+<body ng-app="main">
+    <section ng-controller="ControllerA">
+        <p>Rate of Interest for Controller A: {{resultA}}</p>
+        <p>{{resultA}}</p>
+
+    </section>
+    <section ng-controller="ControllerB ">
+        <p>Rate of Interest for Controller B: {{resultB}}</p>
+
+    </section>
+</body>
+
+
+</html>
