@@ -1,0 +1,17 @@
+<! DOCTYPE html>
+<html>
+<script src="angular.js"></script>
+<script src="local.main.js"></script>
+<script src="local.controller.js"></script>
+<script src="ngStorage.min.js"></script>
+
+<body ng-app="main" ng-controller="localstorageCtrl">
+    <input type="text" id="userInput" placeholder="Enter Name" ng-model="todoText" />
+    <input type="button" value="Wish" ng-click="wishListner()" />
+    <input type="button" value="Save" ng-click="saveData(todoText)" />
+    <ul id="list">
+        <li ng-repeat="value in todos">Hello {{value.name}}</li>
+    </ul>
+</body>
+
+</html>
