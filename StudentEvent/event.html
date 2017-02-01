@@ -1,0 +1,29 @@
+<!Doctype html>
+<html>
+
+<head>
+    <script src="angular.js"></script>
+    <script src="event.main.js"></script>
+    <script src="event.controller.js"></script>
+
+</head>
+
+<body ng-app="main" ng-controller="myCtrl">
+    <button ng-click="showData()">Show Data</button>
+
+    <div>
+
+
+        RollNo:
+        <label ng-bind="student.RollNo">
+        </label>
+        <br> Name:
+        <label ng-bind="student.Name">
+        </label>
+        <br>
+        <img ng-src={{student.image}} height="500">
+    </div>
+
+</body>
+
+</html>
