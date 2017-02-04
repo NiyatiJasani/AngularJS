@@ -1,0 +1,42 @@
+<!Doctype html>
+<html>
+
+<head>
+    <script src="/angular.js"></script>
+    <script src="angular-route.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!--
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+-->
+
+</head>
+
+<body>
+
+    <!-- define angular controller -->
+
+    <body ng-app="main">
+        <script type="text/javascript"></script>
+
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Min-Spa</a>
+                </div>
+
+                <ul class="nav navbar-nav navbar-centre">
+                    <li><a href="#/"> Home</a></li>
+                    <li><a href="#/about"> About</a></li>
+                    <li><a href="#/contact"> Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <div ng-view=""></div>
+    </body>
+
+</html>
