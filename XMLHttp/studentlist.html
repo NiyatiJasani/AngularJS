@@ -1,0 +1,96 @@
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <script src="angular.js"></script>
+    <script src="studentlist.main.js"></script>
+    <script src="studentlist.controller.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+
+    <button type="button" ng-click="click()">Display Students</button>
+    <button type="button" ng-click="addClick()">Add</button>
+    <!--    <div ng-app="myApp" ng-controller="myCtrl">-->
+
+    <!--    <h1>{{students}}</h1>-->
+
+    <table border=2>
+        <tr>
+            <th>Rollno</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Date</th>
+            <th>Age</th>
+            <th>isMale</th>
+        </tr>
+
+
+        <tr ng-style="{'background-color':({{data.age}} >= 23 ? '#c8e6c9' : '#ffebee')}" ng-repeat="data in students">
+            <th>{{data.rollNo}}</th>
+            <th>{{data.name}}</th>
+            <th>{{data.email}}</th>
+            <th>{{data.date}}</th>
+            <th>{{data.age}}</th>
+            <th>{{data.isMale}}</th>
+            <th>
+                <input type="checkbox" onclick="return false" ng-model="data.isMale">
+
+            </th>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td>RollNo: </td>
+            <td>
+                <input type="text" name="rollno">
+            </td>
+
+            <tr>
+                <td>Name: </td>
+                <td>
+                    <div class="col-xs-12">
+                        <input type="text" ng-model="name">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Email: </td>
+                <td>
+                    <div class="col-xs-12">
+                        <input type="text" ng-model="email">
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Date: </td>
+                <td>
+                    <input type="text" ng-model="date">
+                </td>
+            </tr>
+            <tr>
+                <td>Age: </td>
+                <td>
+                    <input type="text" ng-model="age">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="radio" ng-model="gender" value="true" name="gender" for="true" checked/> Male
+                </td>
+                <br>
+                <td>
+                    <input type="radio" ng-model="gender" value="false" name="gender" for="false" />Female
+                </td>
+            </tr>
+
+    </table>
+
+</body>
+
+</html>
