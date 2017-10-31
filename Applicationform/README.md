@@ -1,2 +1,3 @@
 # AngularJS
-Covering concepts of AngularJS [link](http://niyatijasani.github.io/AngularJS/Applicationform/feedback.html)
+Simple Application Inout Form
+[link](http://niyatijasani.github.io/AngularJS/Applicationform/feedback.html)
